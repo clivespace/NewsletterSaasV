@@ -1,7 +1,6 @@
 "use server"
 
 import { revalidatePath } from "next/cache"
-import { randomBytes } from "crypto"
 
 // Mock data for subscribers and groups. In a real app, this would be a database query.
 const mockSubscribers = [
@@ -47,7 +46,8 @@ export async function sendNewsletter(prevState: FormState, formData: FormData): 
 
   // 2. Loop through subscribers and dispatch emails (mocked)
   for (const subscriber of subscribers) {
-    const forwardToken = randomBytes(8).toString("hex")
+    // Replaced Node.js crypto with a browser-compatible random string generator
+    const forwardToken = Math.random().toString(36).substring(2, 18)
     console.log(`[MAIL] Preparing email for ${subscriber.email} with token ${forwardToken}`)
     // Simulate network delay for each email
     await new Promise((resolve) => setTimeout(resolve, 100))
