@@ -97,23 +97,23 @@ export async function generateNewsletterDraft(
           .navbar .nav-links a { color: #333333; text-decoration: none; font-size: 14px; font-weight: 800; margin-left: 15px; }
           .banner { height: 200px; overflow: hidden; }
           .banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
-          .main-content-wrapper { display: flex; gap: 20px; padding: 20px; }
-          .content { flex: 2; padding-right: 20px; color: #333; line-height: 1.6; }
-          .content h1 { color: #333; font-size: 28px; margin-bottom: 10px; }
-          .content h2 { color: #0d6efd; font-size: 22px; border-bottom: 2px solid #eeeeee; padding-bottom: 5px; margin-top: 30px; }
-          .content h3 { font-size: 18px; color: #333; margin-bottom: 10px; }
-          .content p { margin-bottom: 20px; }
-          .key-points-table { width: 100%; border-spacing: 0 15px; margin: 20px 0; }
-          .key-points-table td { vertical-align: top; }
+          .main-content-wrapper { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
+          .content { flex: 2; min-width: 300px; padding-right: 20px; color: #333; line-height: 1.6; overflow-wrap: break-word; word-wrap: break-word; }
+          .content h1 { color: #333; font-size: 28px; margin-bottom: 10px; overflow-wrap: break-word; word-wrap: break-word; }
+          .content h2 { color: #0d6efd; font-size: 22px; border-bottom: 2px solid #eeeeee; padding-bottom: 5px; margin-top: 30px; overflow-wrap: break-word; word-wrap: break-word; }
+          .content h3 { font-size: 18px; color: #333; margin-bottom: 10px; overflow-wrap: break-word; word-wrap: break-word; }
+          .content p { margin-bottom: 20px; overflow-wrap: break-word; word-wrap: break-word; max-width: 100%; }
+          .key-points-table { width: 100%; border-spacing: 0 15px; margin: 20px 0; table-layout: fixed; }
+          .key-points-table td { vertical-align: top; overflow-wrap: break-word; word-wrap: break-word; }
           .key-points-table .icon { width: 24px; padding-right: 12px; }
-          .sidebar { flex: 1; padding: 20px; background-color: #f9f9f9; border-left: 1px solid #e0e0e0; }
-          .sidebar h3 { color: #333; margin-bottom: 15px; font-size: 16px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+          .sidebar { flex: 1; min-width: 200px; padding: 20px; background-color: #f9f9f9; border-left: 1px solid #e0e0e0; overflow-wrap: break-word; word-wrap: break-word; }
+          .sidebar h3 { color: #333; margin-bottom: 15px; font-size: 16px; border-bottom: 1px solid #ddd; padding-bottom: 5px; overflow-wrap: break-word; word-wrap: break-word; }
           .sidebar .link-item { margin-bottom: 15px; }
-          .sidebar .link-item a { color: #0d6efd; text-decoration: none; font-weight: 600; display: block; margin-bottom: 3px; }
-          .sidebar .link-item p { font-size: 13px; color: #666; margin: 0; line-height: 1.4; }
+          .sidebar .link-item a { color: #0d6efd; text-decoration: none; font-weight: 600; display: block; margin-bottom: 3px; overflow-wrap: break-word; word-wrap: break-word; }
+          .sidebar .link-item p { font-size: 13px; color: #666; margin: 0; line-height: 1.4; overflow-wrap: break-word; word-wrap: break-word; }
           .divider { border-top: 1px solid #ddd; margin: 20px 0; }
           .video-section .video-image { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
-          .video-section .video-summary { font-size: 13px; color: #666; line-height: 1.4; }
+          .video-section .video-summary { font-size: 13px; color: #666; line-height: 1.4; overflow-wrap: break-word; word-wrap: break-word; }
           .footer { padding: 20px; text-align: center; background-color: #f7f7f7; color: #777; font-size: 12px; border-top: 1px solid #dddddd; }
         </style>
       </head>
